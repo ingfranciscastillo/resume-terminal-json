@@ -1,0 +1,155 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Francis Castillo",
+    "label": "Full-Stack Engineer & Open Source Tinkerer",
+    "image": "",
+    "email": "franciscastillodev@proton.me",
+    "phone": "+1 (555) 010-2042",
+    "url": "https://franciscode.dev",
+    "summary": "Full-stack engineer focused on building useful tools, robust systems, and fast, polished UIs. I care about good APIs, visual details, and shipping things that actually work. Currently exploring local-first apps and AI tooling.",
+    "location": {
+      "address": "",
+      "postalCode": "22000",
+      "city": "La Romana",
+      "countryCode": "DO",
+      "region": "Dominican Republic"
+    },
+    "profiles": [
+      { "network": "GitHub", "username": "francis", "url": "https://github.com/ingfranciscastillo" },
+      { "network": "LinkedIn", "username": "francis", "url": "https://linkedin.com/in/ingfranciscastillo" },
+      { "network": "Twitter", "username": "francis_dev", "url": "https://twitter.com/ingfranciscas" }
+    ]
+  },
+  "work": [
+    {
+      "name": "Vector Labs",
+      "position": "Staff Software Engineer",
+      "url": "https://vectorlabs.example",
+      "startDate": "2022-03",
+      "endDate": "",
+      "summary": "Lead engineer on the realtime collaboration platform powering 40k+ teams.",
+      "highlights": [
+        "Designed CRDT-backed sync engine reducing conflict resolution latency by 78%",
+        "Mentored 6 engineers; introduced RFC + design review culture",
+        "Migrated billing infra to event-sourced architecture"
+      ]
+    },
+    {
+      "name": "Northwind",
+      "position": "Senior Software Engineer",
+      "url": "https://northwind.example",
+      "startDate": "2019-01",
+      "endDate": "2022-02",
+      "summary": "Built the developer platform: SDKs, CLI, and webhook infrastructure.",
+      "highlights": [
+        "Shipped TypeScript and Go SDKs adopted by 12k developers",
+        "Cut p99 API latency from 850ms to 120ms",
+        "Authored internal style guide adopted across 30+ services"
+      ]
+    },
+    {
+      "name": "Pixelforge",
+      "position": "Software Engineer",
+      "url": "",
+      "startDate": "2016-06",
+      "endDate": "2018-12",
+      "summary": "Frontend engineer on a creative tools suite (vector + raster editing).",
+      "highlights": [
+        "Implemented WebGL-based brush engine",
+        "Built plugin SDK enabling 80+ third-party extensions"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Waterloo",
+      "url": "https://uwaterloo.ca",
+      "area": "Computer Science",
+      "studyType": "BSc",
+      "startDate": "2012-09",
+      "endDate": "2016-05",
+      "score": "3.8/4.0",
+      "courses": ["Distributed Systems", "Compilers", "Programming Languages"]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "AWS Certified Solutions Architect — Professional",
+      "date": "2023-04",
+      "issuer": "Amazon Web Services",
+      "url": "https://aws.amazon.com/certification/"
+    },
+    {
+      "name": "CKA: Certified Kubernetes Administrator",
+      "date": "2021-09",
+      "issuer": "CNCF",
+      "url": "https://www.cncf.io/certification/cka/"
+    }
+  ],
+  "skills": [
+    {
+      "name": "Languages",
+      "level": "Expert",
+      "keywords": ["TypeScript", "Go", "Rust", "Python", "SQL"]
+    },
+    {
+      "name": "Frontend",
+      "level": "Expert",
+      "keywords": ["React", "Vite", "Tailwind", "WebGL", "Framer Motion"]
+    },
+    {
+      "name": "Backend",
+      "level": "Expert",
+      "keywords": ["Node.js", "PostgreSQL", "Redis", "gRPC", "Kafka"]
+    },
+    {
+      "name": "Infra",
+      "level": "Advanced",
+      "keywords": ["Kubernetes", "Terraform", "AWS", "Cloudflare", "Docker"]
+    }
+  ],
+  "languages": [
+    { "language": "English", "fluency": "Native" },
+    { "language": "French", "fluency": "Professional" },
+    { "language": "Portuguese", "fluency": "Conversational" }
+  ],
+  "interests": [
+    { "name": "Local-first software", "keywords": ["CRDTs", "sync"] },
+    { "name": "Mechanical keyboards", "keywords": ["QMK", "ergo"] }
+  ],
+  "projects": [
+    {
+      "name": "termfolio",
+      "description": "An open-source terminal-style portfolio template driven by JSON Resume.",
+      "highlights": ["10k+ GitHub stars", "Used by 500+ devs"],
+      "keywords": ["React", "TypeScript", "Tailwind"],
+      "startDate": "2024-01",
+      "url": "https://github.com/francis/termfolio",
+      "roles": ["Creator", "Maintainer"],
+      "entity": "Open Source",
+      "type": "application"
+    },
+    {
+      "name": "syncbase",
+      "description": "Embedded local-first database with CRDT sync. Rust core, TS bindings.",
+      "highlights": ["Sub-millisecond local writes", "End-to-end encrypted"],
+      "keywords": ["Rust", "WASM", "CRDT"],
+      "startDate": "2023-06",
+      "url": "https://github.com/francis/syncbase",
+      "roles": ["Author"],
+      "entity": "Open Source",
+      "type": "library"
+    },
+    {
+      "name": "promptlab",
+      "description": "Visual playground for designing, testing, and versioning LLM prompts.",
+      "highlights": ["Multi-model diffing", "Eval suite built-in"],
+      "keywords": ["TypeScript", "AI"],
+      "startDate": "2024-07",
+      "url": "https://promptlab.example",
+      "roles": ["Co-founder"],
+      "type": "application"
+    }
+  ]
+}

@@ -1,13 +1,19 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { Terminal } from "~/components/Terminal";
 
-export function meta({}: Route.MetaArgs) {
+export function meta() {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Terminal Portfolio" },
+    { name: "description", content: "Interactive developer resume" },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return (
+    <>
+      <h1 className="sr-only">
+        Terminal Portfolio — interactive developer resume
+      </h1>
+      <Terminal />
+    </>
+  );
 }

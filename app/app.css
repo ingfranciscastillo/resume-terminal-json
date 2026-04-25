@@ -1,15 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
 @import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/*
+  Terminal Portfolio — Design System v4
+  All colors are HSL. Themes are toggled via [data-theme="..."] on <html>.
+  Default = "dark" (hacker green-on-black).
+*/
 
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  /* Semantic color tokens */
+  --color-background: oklch(from hsl(var(--background)) l c h);
+  --color-foreground: oklch(from hsl(var(--background)) l c h);
+
+  --color-card: oklch(from hsl(var(--card)) l c h);
+  --color-card-foreground: oklch(from hsl(var(--card-foreground)) l c h);
+
+  --color-popover: oklch(from hsl(var(--popover)) l c h);
+  --color-popover-foreground: oklch(from hsl(var(--popover-foreground)) l c h);
+
+  --color-primary: oklch(from hsl(var(--primary)) l c h);
+  --color-primary-foreground: oklch(from hsl(var(--primary-foreground)) l c h);
+
+  --color-secondary: oklch(from hsl(var(--secondary)) l c h);
+  --color-secondary-foreground: oklch(from hsl(var(--secondary-foreground)) l c h);
+
+  --color-muted: oklch(from hsl(var(--muted)) l c h);
+  --color-muted-foreground: oklch(from hsl(var(--muted-foreground)) l c h);
+
+  --color-accent: oklch(from hsl(var(--accent)) l c h);
+  --color-accent-foreground: oklch(from hsl(var(--accent-foreground)) l c h);
+
+  --color-destructive: oklch(from hsl(var(--destructive)) l c h);
+  --color-destructive-foreground: oklch(from hsl(var(--destructive-foreground)) l c h);
+
+  --color-border: oklch(from hsl(var(--border)) l c h);
+  --color-input: oklch(from hsl(var(--input)) l c h);
+  --color-ring: oklch(from hsl(var(--ring)) l c h);
+
+  --radius-sm: calc(var(--radius) - 0.125rem);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 0.125rem);
+
+  /* Sidebar tokens */
+  --color-sidebar-background: oklch(from hsl(var(--sidebar-background)) l c h);
+  --color-sidebar-foreground: oklch(from hsl(var(--sidebar-foreground)) l c h);
+  --color-sidebar-primary: oklch(from hsl(var(--sidebar-primary)) l c h);
+  --color-sidebar-primary-foreground: oklch(from hsl(var(--sidebar-primary-foreground)) l c h);
+  --color-sidebar-accent: oklch(from hsl(var(--sidebar-accent)) l c h);
+  --color-sidebar-accent-foreground: oklch(from hsl(var(--sidebar-accent-foreground)) l c h);
+  --color-sidebar-border: oklch(from hsl(var(--sidebar-border)) l c h);
+  --color-sidebar-ring: oklch(from hsl(var(--sidebar-ring)) l c h);
+
+  /* Terminal semantic tokens */
+  --color-term-bg: oklch(from hsl(var(--term-bg)) l c h);
+  --color-term-fg: oklch(from hsl(var(--term-fg)) l c h);
+  --color-term-prompt: oklch(from hsl(var(--term-prompt)) l c h);
+  --color-term-user: oklch(from hsl(var(--term-user)) l c h);
+  --color-term-path: oklch(from hsl(var(--term-path)) l c h);
+  --color-term-cursor: oklch(from hsl(var(--term-cursor)) l c h);
+  --color-term-link: oklch(from hsl(var(--term-link)) l c h);
+  --color-term-warn: oklch(from hsl(var(--term-warn)) l c h);
+  --color-term-error: oklch(from hsl(var(--term-error)) l c h);
+  --color-term-dim: oklch(from hsl(var(--term-dim)) l c h);
+  --color-term-key: oklch(from hsl(var(--term-key)) l c h);
+
+  /* Custom variant for data-theme */
+  --animate-term-blink: term-blink 1s steps(2, start) infinite;
+
+  @keyframes term-blink {
+    to {
+      visibility: hidden;
+    }
+  }
 }
 
-html,
-body {
-  @apply bg-white dark:bg-gray-950;
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
 
-  @media (prefers-color-scheme: dark) {
-    color-scheme: dark;
+@layer base {
+  :root,
+  [data-theme="dark"] {
+    --background: 0 0% 4%;
+    --foreground: 140 70% 75%;
+
+    --card: 0 0% 6%;
+    --card-foreground: 140 70% 75%;
+
+    --popover: 0 0% 6%;
+    --popover-foreground: 140 70% 75%;
+
+    --primary: 140 80% 55%;
+    --primary-foreground: 0 0% 4%;
+
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 140 70% 75%;
+
+    --muted: 0 0% 12%;
+    --muted-foreground: 140 15% 55%;
+
+    --accent: 180 80% 55%;
+    --accent-foreground: 0 0% 4%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 140 30% 18%;
+    --input: 140 30% 18%;
+    --ring: 140 80% 55%;
+    --radius: 0.5rem;
+
+    --term-bg: 0 0% 4%;
+    --term-fg: 0 0% 92%;
+    --term-prompt: 140 80% 55%;
+    --term-user: 180 80% 60%;
+    --term-path: 220 80% 70%;
+    --term-cursor: 140 80% 55%;
+    --term-link: 200 90% 65%;
+    --term-warn: 40 95% 60%;
+    --term-error: 0 84% 65%;
+    --term-dim: 0 0% 50%;
+    --term-key: 280 70% 75%;
+    --term-glow: 0 0 0 transparent;
+
+    --sidebar-background: 0 0% 4%;
+    --sidebar-foreground: 140 70% 75%;
+    --sidebar-primary: 140 80% 55%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 0 0% 10%;
+    --sidebar-accent-foreground: 140 70% 75%;
+    --sidebar-border: 140 30% 18%;
+    --sidebar-ring: 140 80% 55%;
+  }
+
+  [data-theme="light"] {
+    --background: 0 0% 98%;
+    --foreground: 220 15% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 220 15% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 15% 15%;
+    --primary: 140 60% 35%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 220 15% 92%;
+    --secondary-foreground: 220 15% 15%;
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 10% 40%;
+    --accent: 200 80% 40%;
+    --accent-foreground: 0 0% 98%;
+    --border: 220 15% 85%;
+    --input: 220 15% 85%;
+    --ring: 140 60% 35%;
+
+    --term-bg: 0 0% 98%;
+    --term-fg: 220 15% 15%;
+    --term-prompt: 140 60% 35%;
+    --term-user: 200 80% 35%;
+    --term-path: 220 70% 40%;
+    --term-cursor: 140 60% 35%;
+    --term-link: 210 90% 45%;
+    --term-warn: 30 90% 40%;
+    --term-error: 0 75% 45%;
+    --term-dim: 220 10% 50%;
+    --term-key: 280 60% 45%;
+    --term-glow: 0 0 0 transparent;
+  }
+
+  [data-theme="matrix"] {
+    --background: 0 0% 0%;
+    --foreground: 120 100% 60%;
+    --card: 0 0% 0%;
+    --card-foreground: 120 100% 60%;
+    --popover: 0 0% 0%;
+    --popover-foreground: 120 100% 60%;
+    --primary: 120 100% 50%;
+    --primary-foreground: 0 0% 0%;
+    --secondary: 120 30% 8%;
+    --secondary-foreground: 120 100% 60%;
+    --muted: 120 30% 8%;
+    --muted-foreground: 120 50% 45%;
+    --accent: 120 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --border: 120 50% 15%;
+    --input: 120 50% 15%;
+    --ring: 120 100% 50%;
+
+    --term-bg: 0 0% 0%;
+    --term-fg: 120 100% 60%;
+    --term-prompt: 120 100% 50%;
+    --term-user: 120 100% 70%;
+    --term-path: 120 100% 50%;
+    --term-cursor: 120 100% 50%;
+    --term-link: 120 100% 70%;
+    --term-warn: 60 100% 60%;
+    --term-error: 0 100% 60%;
+    --term-dim: 120 50% 35%;
+    --term-key: 120 100% 70%;
+    --term-glow: 0 0 8px hsl(120 100% 50% / 0.6);
+  }
+
+  [data-theme="hacker"] {
+    --background: 25 30% 4%;
+    --foreground: 35 100% 60%;
+    --card: 25 30% 6%;
+    --card-foreground: 35 100% 60%;
+    --popover: 25 30% 6%;
+    --popover-foreground: 35 100% 60%;
+    --primary: 35 100% 55%;
+    --primary-foreground: 25 30% 4%;
+    --secondary: 25 30% 10%;
+    --secondary-foreground: 35 100% 60%;
+    --muted: 25 30% 12%;
+    --muted-foreground: 35 50% 45%;
+    --accent: 35 100% 55%;
+    --accent-foreground: 25 30% 4%;
+    --border: 35 40% 20%;
+    --input: 35 40% 20%;
+    --ring: 35 100% 55%;
+
+    --term-bg: 25 30% 4%;
+    --term-fg: 35 100% 65%;
+    --term-prompt: 35 100% 55%;
+    --term-user: 45 100% 60%;
+    --term-path: 30 80% 50%;
+    --term-cursor: 35 100% 55%;
+    --term-link: 50 100% 65%;
+    --term-warn: 20 100% 55%;
+    --term-error: 0 90% 60%;
+    --term-dim: 35 30% 40%;
+    --term-key: 45 100% 70%;
+    --term-glow: 0 0 6px hsl(35 100% 55% / 0.5);
+  }
+
+  [data-theme="dracula"] {
+    --background: 231 15% 18%;
+    --foreground: 60 30% 96%;
+    --card: 232 14% 22%;
+    --card-foreground: 60 30% 96%;
+    --popover: 232 14% 22%;
+    --popover-foreground: 60 30% 96%;
+    --primary: 326 100% 74%;
+    --primary-foreground: 231 15% 18%;
+    --secondary: 232 14% 28%;
+    --secondary-foreground: 60 30% 96%;
+    --muted: 232 14% 28%;
+    --muted-foreground: 225 27% 70%;
+    --accent: 191 97% 77%;
+    --accent-foreground: 231 15% 18%;
+    --border: 232 14% 30%;
+    --input: 232 14% 30%;
+    --ring: 326 100% 74%;
+
+    --term-bg: 231 15% 18%;
+    --term-fg: 60 30% 96%;
+    --term-prompt: 135 94% 65%;
+    --term-user: 326 100% 74%;
+    --term-path: 191 97% 77%;
+    --term-cursor: 326 100% 74%;
+    --term-link: 191 97% 77%;
+    --term-warn: 31 100% 71%;
+    --term-error: 0 100% 67%;
+    --term-dim: 225 27% 60%;
+    --term-key: 265 89% 78%;
+    --term-glow: 0 0 0 transparent;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    font-feature-settings: 'liga' 0, 'calt' 0;
+  }
+}
+
+@layer utilities {
+  .term-glow {
+    text-shadow: var(--term-glow);
+  }
+
+  .blink-cursor {
+    display: inline-block;
+    width: 0.6ch;
+    height: 1.1em;
+    background: hsl(var(--term-cursor));
+    vertical-align: text-bottom;
+    margin-left: 2px;
+    animation: term-blink 1s steps(2, start) infinite;
+    box-shadow: var(--term-glow);
+  }
+
+  [data-theme="matrix"] .crt-scanlines::before,
+  [data-theme="hacker"] .crt-scanlines::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 2px,
+      hsl(0 0% 0% / 0.18) 3px,
+      transparent 4px
+    );
+    mix-blend-mode: multiply;
+    z-index: 5;
   }
 }
