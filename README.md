@@ -2,13 +2,18 @@
 
 An interactive developer resume that runs in the browser as a terminal emulator. Type commands to explore experience, skills, projects, and more.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-1e3a8a?style=for-the-badge&logo=terminal)](https://franciscode.dev)
+[![Live Demo](https://img.shields.io/badge/Live-Demo-1e3a8a?style=for-the-badge&logo=terminal)](https://termportfolio.netlify.app/)
 [![Built with React Router](https://img.shields.io/badge/Built%20with-React%20Router-1e3a8a?style=for-the-badge)](https://reactrouter.com)
 [![Styled with Tailwind CSS](https://img.shields.io/badge/Styled%20with-Tailwind%20CSS-1e3a8a?style=for-the-badge)](https://tailwindcss.com)
 
 ## Screenshots
 
-[Add your terminal screenshots here]
+![Help Menu](/screenshots/Help%20Menu.jpeg)
+![Dark Theme](/screenshots/Dark%20Theme.jpeg)
+![Dracula Theme](/screenshots/Dracula%20Theme.jpeg)
+![Hacker Theme](/screenshots/Hacker%20Theme.jpeg)
+![Matrix Theme](/screenshots/Matrix%20Theme.jpeg)
+![Light Theme](/screenshots/Light%20Theme.jpeg)
 
 ---
 
