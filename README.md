@@ -8,70 +8,7 @@ An interactive developer resume that runs in the browser as a terminal emulator.
 
 ## Screenshots
 
-### Default Theme (Dark)
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│ [ OK ] Booting termfolio v1.0.0                                 │
-│ [ OK ] Mounting /dev/resume                                    │
-│ [ OK ] Loading resume.json … ok                                │
-│ [ OK ] Initializing shell                                     │
-│ [ OK ] Spawning interactive session                            │
-│                                                                 │
-│ termfolio — type help to begin.                              │
-└─────────────────────────────────────────────────────────────────┘
-guest@portfolio:~$ help
-termfolio — type a command and press Enter.
-Use Tab to autocomplete · ↑/↓ for history · Ctrl+L to clear
-
-Info
-  help          Show all available commands
-  about        Who am I?
-
-Portfolio
-  about        Who am I?
-  contact      Email, phone, and social profiles
-  skills       Skills grouped by category
-  work         Work experience timeline
-  projects     Side projects and open source
-  education    Education history
-  certificates Professional certifications
-  languages   Spoken languages
-  resume       Download resume.json
-  open         Open a project URL
-
-System
-  theme        Switch theme: dark · light · matrix · hacker · dracula
-  clear        Clear the terminal
-  whoami       Print current user
-  date         Show current date and time
-  echo         Echo arguments
-```
-
-### Matrix Theme
-
-```
-┌─────────────────────────────────────────────────────────────────┐
-│ [ OK ] Booting termfolio v1.0.0                                 │
-│ [ OK ] Mounting /dev/resume                                    │
-│ [ OK ] Loading resume.json … ok                                │
-│ [ OK ] Initializing shell                                     │
-│ [ OK ] Spawning interactive session                            │
-│                                                                 │
-│ termfolio — type help to begin.                              │
-└─────────────────────────────────────────────────────────────────┘
-guest@portfolio:~$ theme matrix
-Theme set to matrix
-guest@portfolio:~$ work
-Staff Software Engineer @ Vector Labs  2022-03 → Present
-  Lead engineer on the realtime collaboration platform
-  powering 40k+ teams.
-    • Designed CRDT-backed sync engine reducing conflict
-      resolution latency by 78%
-    • Mentored 6 engineers; introduced RFC + design review
-      culture
-    • Migrated billing infra to event-sourced architecture
-```
+[Add your terminal screenshots here]
 
 ---
 
@@ -82,7 +19,6 @@ Staff Software Engineer @ Vector Labs  2022-03 → Present
 - **5 Themes** — dark (default), light, matrix, hacker, dracula
 - **Keyboard Shortcuts** — Tab autocomplete, ↑/↓ history, Ctrl+L clear
 - **Download Resume** — Export as JSONResume-compatible file
-- **Accessible** — Works with screen readers, keyboard navigation, reduced motion support
 
 ---
 
@@ -122,44 +58,44 @@ pnpm start
 
 ### Info Commands
 
-| Command | Description |
-|---------|-------------|
-| `help` | Show all available commands |
-| `about` | Who am I? |
+| Command | Description                 |
+| ------- | --------------------------- |
+| `help`  | Show all available commands |
+| `about` | Who am I?                   |
 
 ### Portfolio Commands
 
-| Command | Description |
-|---------|-------------|
-| `about` | Who am I? Basic info, summary |
-| `contact` | Email, phone, location, social profiles |
-| `skills` | Technical skills grouped by category with keywords |
-| `work` | Work experience with highlights |
-| `projects` | Side projects and open source |
-| `education` | Education history and courses |
-| `certificates` | Professional certifications |
-| `languages` | Spoken languages and fluency |
-| `resume` | Download resume.json file |
-| `open <project>` | Open a project URL in new tab |
+| Command          | Description                                        |
+| ---------------- | -------------------------------------------------- |
+| `about`          | Who am I? Basic info, summary                      |
+| `contact`        | Email, phone, location, social profiles            |
+| `skills`         | Technical skills grouped by category with keywords |
+| `work`           | Work experience with highlights                    |
+| `projects`       | Side projects and open source                      |
+| `education`      | Education history and courses                      |
+| `certificates`   | Professional certifications                        |
+| `languages`      | Spoken languages and fluency                       |
+| `resume`         | Download resume.json file                          |
+| `open <project>` | Open a project URL in new tab                      |
 
 ### System Commands
 
-| Command | Description |
-|---------|-------------|
+| Command        | Description                                         |
+| -------------- | --------------------------------------------------- |
 | `theme <name>` | Switch theme (dark, light, matrix, hacker, dracula) |
-| `clear` | Clear terminal screen |
-| `whoami` | Current user (from resume) |
-| `date` | Current date and time |
-| `echo <text>` | Echo text back |
+| `clear`        | Clear terminal screen                               |
+| `whoami`       | Current user (from resume)                          |
+| `date`         | Current date and time                               |
+| `echo <text>`  | Echo text back                                      |
 
 ### Keyboard Shortcuts
 
-| Shortcut | Action |
-|----------|--------|
-| `Tab` | Autocomplete command |
-| `↑` / `↓` | Command history |
-| `Ctrl+L` | Clear screen |
-| `Enter` | Execute command |
+| Shortcut  | Action               |
+| --------- | -------------------- |
+| `Tab`     | Autocomplete command |
+| `↑` / `↓` | Command history      |
+| `Ctrl+L`  | Clear screen         |
+| `Enter`   | Execute command      |
 
 ---
 
@@ -200,15 +136,16 @@ Resume data is stored in `app/data/resume.json` following the [JSON Resume](http
 
 Five themes available via `theme <name>` command:
 
-| Theme | Description |
-|-------|-------------|
-| `dark` | Default green-on-black (hacker aesthetic) |
-| `light` | Light mode for daytime viewing |
-| `matrix` | Classic green matrix rain effect |
-| `hacker` | Amber CRT terminal |
-| `dracula` | Dracula purple color scheme |
+| Theme     | Description                               |
+| --------- | ----------------------------------------- |
+| `dark`    | Default green-on-black (hacker aesthetic) |
+| `light`   | Light mode for daytime viewing            |
+| `matrix`  | Classic green matrix rain effect          |
+| `hacker`  | Amber CRT terminal                        |
+| `dracula` | Dracula purple color scheme               |
 
 Each theme includes:
+
 - Custom color palette (background, foreground, accents)
 - Terminal-specific tokens (prompt, user, path, cursor colors)
 - Optional CRT scanlines for matrix/hacker themes
@@ -249,8 +186,6 @@ app/
 
 - **Framework** — [React Router](https://reactrouter.com/) v7
 - **Styling** — [Tailwind CSS](https://tailwindcss.com/) v4
-- **UI Components** — [shadcn/ui](https://ui.shadcn.com/)
-- **Icons** — [Tabler Icons](https://tabler.io/icons)
 - **Font** — [JetBrains Mono](https://www.jetbrains.com/lp/mono/)
 
 ---
