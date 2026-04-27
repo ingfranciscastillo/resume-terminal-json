@@ -206,6 +206,14 @@ This is a personal portfolio project, but suggestions are welcome:
 
 ---
 
+## Support
+
+If you find this project useful, consider supporting my work!
+
+[![Buy Me A Coffee](https://cdn.buymeacoffee.com/buttons/v2/default-violet.png)](https://www.buymeacoffee.com/ingfranciscastillo)
+
+---
+
 ## License
 
 MIT License — feel free to use this as a template for your own terminal portfolio.
@@ -213,5 +221,3 @@ MIT License — feel free to use this as a template for your own terminal portfo
 ---
 
 Built with passion for terminals and good APIs.
-
-[![GitHub](https://img.shields.io/badge/GitHub-ingfranciscastillo-1e3a8a?style=for-the-badge&logo=github)](https://github.com/ingfranciscastillo)
