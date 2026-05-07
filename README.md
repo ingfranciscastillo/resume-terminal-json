@@ -1,19 +1,14 @@
 # Terminal Portfolio
 
-An interactive developer resume that runs in the browser as a terminal emulator. Type commands to explore experience, skills, projects, and more.
+> An interactive developer resume that runs in the browser as a terminal emulator. Type commands to explore experience, skills, projects, and more.
 
-[![Live Demo](https://img.shields.io/badge/Live-Demo-1e3a8a?style=for-the-badge&logo=terminal)](https://termportfolio.netlify.app/)
-[![Built with React Router](https://img.shields.io/badge/Built%20with-React%20Router-1e3a8a?style=for-the-badge)](https://reactrouter.com)
-[![Styled with Tailwind CSS](https://img.shields.io/badge/Styled%20with-Tailwind%20CSS-1e3a8a?style=for-the-badge)](https://tailwindcss.com)
+[![behance](https://img.shields.io/badge/behance-1769FF?style=for-the-badge&logo=behance&logoColor=white)](https://www.behance.net/ingfranciscastillo)
+[![github_stars](https://img.shields.io/github/stars/ingfranciscastillo/ai-resume-analyzer?style=for-the-badge)](https://github.com/ingfranciscastillo/resume-terminal-json/stargazers)
+[![license](https://img.shields.io/badge/license-MIT-green?style=for-the-badge)](LICENSE)
+[![linkedin](https://img.shields.io/badge/linkedin-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/ingfranciscastillo)
+[![last_commit](https://img.shields.io/github/last-commit/ingfranciscastillo/ai-resume-analyzer?style=for-the-badge)](https://github.com/ingfranciscastillo/resume-terminal-json/commits/main)
 
-## Screenshots
-
-![Help Menu](/screenshots/Help%20Menu.jpeg)
-![Dark Theme](/screenshots/Dark%20Theme.jpeg)
-![Dracula Theme](/screenshots/Dracula%20Theme.jpeg)
-![Hacker Theme](/screenshots/Hacker%20Theme.jpeg)
-![Matrix Theme](/screenshots/Matrix%20Theme.jpeg)
-![Light Theme](/screenshots/Light%20Theme.jpeg)
+![Preview](/screenshots/Help%20Menu.jpeg)
 
 ---
 
@@ -195,17 +190,6 @@ app/
 
 ---
 
-## Contributing
-
-This is a personal portfolio project, but suggestions are welcome:
-
-1. Fork the repository
-2. Create a feature branch
-3. Make changes
-4. Submit a pull request
-
----
-
 ## Support
 
 If you find this project useful, consider supporting my work!
@@ -217,7 +201,3 @@ If you find this project useful, consider supporting my work!
 ## License
 
 MIT License — feel free to use this as a template for your own terminal portfolio.
-
----
-
-Built with passion for terminals and good APIs.
